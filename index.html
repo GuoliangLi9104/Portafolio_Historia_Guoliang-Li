@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio de Evidencias · Historia de la Ciencia, la Técnica y la Tecnología (II-25, SC-01)</title>
+  <meta name="description" content="Portafolio de evidencias del curso Historia de la Ciencia, la Técnica y la Tecnología (II-25, SC-01).">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020;         /* fondo oscuro profundo */
+      --card:#121936;       /* tarjetas */
+      --ink:#e9ecf8;        /* texto principal */
+      --muted:#b8c1ec;      /* texto secundario */
+      --brand:#7c9cff;      /* acentos azules */
+      --brand-2:#45e0b5;    /* acentos verde-agua */
+      --line:#263159;       /* líneas y bordes */
+      --shadow: 0 12px 30px rgba(0,0,0,.25);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --radius-lg: 28px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 20% -10%, #1b2450 10%, transparent 60%) , radial-gradient(1000px 700px at 100% 0%, #0d183a 10%, transparent 60%), var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header.hero{
+      position:relative; overflow:hidden; padding:64px 20px 36px; border-bottom:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(124,156,255,.12), transparent 45%);
+    }
+    .container{max-width:var(--maxw); margin:0 auto}
+    .hero-card{
+      background: linear-gradient(180deg, rgba(18,25,54,.75), rgba(18,25,54,.9));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      border-radius: var(--radius-lg);
+      padding:28px;
+      display:grid; gap:18px;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px; font-weight:600; font-size:.92rem;
+      background: linear-gradient(90deg, rgba(124,156,255,.18), rgba(69,224,181,.18));
+      border:1px solid rgba(124,156,255,.35);
+      color:var(--ink);
+    }
+    .title{
+      font-weight:800; letter-spacing:.2px; line-height:1.15; margin:0;
+      font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem);
+    }
+    .sub{color:var(--muted); margin:.2rem 0 0}
+    .meta{
+      display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); font-size:.95rem
+    }
+    .meta b{color:var(--ink)}
+    nav.sticky{
+      position:sticky; top:0; z-index:30; backdrop-filter:saturate(180%) blur(10px);
+      background: rgba(11,16,32,.65); border-bottom:1px solid var(--line);
+    }
+    nav.sticky .nav-wrap{
+      display:flex; gap:10px; overflow:auto; padding:10px 20px;
+      scrollbar-width:none;
+    }
+    nav.sticky .nav-wrap::-webkit-scrollbar{display:none}
+    .pill{
+      white-space:nowrap; padding:10px 12px; border:1px solid var(--line);
+      border-radius:999px; color:var(--muted); background: #0e1430; font-weight:600;
+    }
+    .pill:hover{border-color:var(--brand); color:var(--ink)}
+    main{padding:28px 20px 60px}
+    section.block{
+      max-width:var(--maxw); margin:28px auto; background:var(--card);
+      border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow);
+    }
+    h2.section-title{margin:0 0 8px; font-size:1.35rem}
+    p.lead{color:var(--muted); margin:0 0 8px}
+    .kpi{
+      display:grid; grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:12px; margin-top:12px;
+    }
+    .kpi .k{
+      background: #0f1533; border:1px solid var(--line); border-radius:12px; padding:14px;
+    }
+    .k .h{font-weight:700; color:var(--brand-2)}
+    details.acd{
+      margin:12px 0; border:1px solid var(--line); border-radius:12px; overflow:hidden;
+      background: #0f1533;
+    }
+    details.acd + details.acd{margin-top:14px}
+    details.acd summary{
+      list-style:none; cursor:pointer; padding:16px 18px; font-weight:700; color:var(--ink);
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      background: linear-gradient(90deg, rgba(124,156,255,.08), rgba(69,224,181,.06));
+    }
+    details.acd summary::-webkit-details-marker{display:none}
+    .badge{font-size:.85rem; color:var(--brand-2); border:1px solid rgba(69,224,181,.45); padding:4px 8px; border-radius:999px}
+    .acd .content{padding:16px 18px 18px; color:var(--muted)}
+    .grid-2{display:grid; gap:16px; grid-template-columns: repeat(2, minmax(0,1fr))}
+    .grid-2 ul{margin:0}
+    .ev-list{display:grid; gap:8px; padding:0; margin:10px 0 0; list-style:none}
+    .ev-list li a{display:inline-flex; align-items:center; gap:8px}
+    .ev-list li{padding:10px 12px; background:#0b1230; border:1px solid var(--line); border-radius:10px}
+    .tag{display:inline-block; font-size:.8rem; border:1px solid var(--line); padding:2px 8px; border-radius:999px; color:var(--muted)}
+    footer{
+      margin:40px 0 0; padding:24px 20px; border-top:1px solid var(--line); color:var(--muted);
+    }
+    .hint{font-size:.92rem; color:var(--muted)}
+    @media (max-width:800px){
+      .grid-2{grid-template-columns:1fr}
+      .kpi{grid-template-columns:1fr}
+    }
+    @media print{
+      nav.sticky{display:none}
+      section.block{page-break-inside:avoid}
+      a{color:inherit; text-decoration:none}
+      header.hero{border:0; padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTADA / HERO -->
+  <header class="hero" id="portada">
+    <div class="container">
+      <div class="hero-card">
+        <span class="chip">Universidad Técnica Nacional · Sede de San Carlos</span>
+        <h1 class="title">Historia de la Ciencia, la Técnica y la Tecnología <span style="color:var(--brand)">II‑25</span>, <span style="color:var(--brand-2)">SC‑01</span></h1>
+        <p class="sub">Portafolio de evidencias del curso · II cuatrimestre 2025</p>
+        <div class="meta">
+          <div><b>Estudiante:</b> Guoliang Andres Li Gonzalez</div>
+          <div><b>Docente:</b> Fabián Vargas Román</div>
+          <div><b>Modalidad:</b> Mixta (presencial / virtual / asincrónica)</div>
+        </div>
+        <div class="kpi">
+          <div class="k"><div class="h">14</div><div>Clases documentadas</div></div>
+          <div class="k"><div class="h">3</div><div>Foros evaluados</div></div>
+          <div class="k"><div class="h">8</div><div>Proyectos / presentaciones</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="sticky">
+    <div class="nav-wrap container">
+      <a class="pill" href="#resumen">Resumen</a>
+      <a class="pill" href="#clases">Clases 1–14</a>
+      <a class="pill" href="#foros">Foros</a>
+      <a class="pill" href="#proyectos">Proyectos</a>
+      <a class="pill" href="#documentales">Documentales</a>
+      <a class="pill" href="#descargas">Descargas</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- RESUMEN -->
+    <section class="block" id="resumen">
+      <h2 class="section-title">Resumen del Portafolio</h2>
+      <p class="lead">Evidencias estructuradas por sesión con objetivos, actividades, reflexiones y enlaces a materiales.</p>
+      <ul class="ev-list">
+        <li><span class="tag">Objetivo</span> Documentar el proceso de aprendizaje y producción académica (clases, foros, proyectos, análisis).</li>
+        <li><span class="tag">Resultados</span> Consolidación de habilidades de análisis histórico, argumentación y trabajo colaborativo.</li>
+        <li><span class="tag">Herramientas</span> Plataforma institucional UTN, documentos, presentaciones, videos y material bibliográfico.</li>
+      </ul>
+    </section>
+
+    <!-- CLASES -->
+    <section class="block" id="clases">
+      <h2 class="section-title">Clases (1–14)</h2>
+      <p class="lead">Expande cada sesión para ver objetivos, actividades y evidencias.</p>
+
+      <!-- Clase 1 -->
+      <details class="acd" open>
+        <summary>
+          📅 Clase 1 — 22 mayo · <span class="badge">Presencial (Aula 304)</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Presentación del curso, revisión de programa, cronograma y evaluación; conformación de grupos. <br>
+            <b>Actividades:</b> Análisis del curso, formación de comunidades de trabajo, presentación de temas, diagnóstico inicial.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li>Programa, cronograma, evaluación (subir a <code>/evidencias/</code>)</li>
+              <li>Listado de grupos y temas</li>
+              <li>Enlace a WhatsApp del grupo</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 2 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 2 — 29 mayo · <span class="badge">Presencial</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Reconocer alcances de ciencia, técnica y tecnología desde la Prehistoria al mundo civilizado. <br>
+            <b>Actividades:</b> Marco conceptual y línea de tiempo general.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list"><li>Apuntes y fotos de pizarra</li></ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 3 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 3 — 05 junio · <span class="badge">En línea (Asincrónica)</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Redactar objetivos del proyecto y participar en Foro I (importancia de la historia). <br>
+            <b>Material:</b> Videos Mentes Brillantes & Enlace Judío.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li>Objetivo general + 3–4 específicos</li>
+              <li>Respuesta Foro I (captura o PDF)</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 4 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 4 — 12 junio · <span class="badge">Presencial</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> División Prehistoria/Historia y avance del proyecto. <br>
+            <b>Material:</b> Esquema Prehistoria y Esquema División de la Historia (Línea del tiempo).
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li>Esquema Prehistoria (PNG/JPG)</li>
+              <li>Línea de tiempo (DOCX)</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 5 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 5 — 19 junio · <span class="badge">En línea (Asincrónica)</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Entrega de avance (introducción, objetivos y desarrollo con citas).
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list"><li>PDF/Word del avance subido</li></ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 6 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 6 — 26 junio · <span class="badge">Virtual (sincrónica)</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Presentación del proyecto #1 y análisis del documental Machu Picchu.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li><a href="/evidencias/CUADRO_MACHU_PICCHU.docx">Cuadro resumen (docx)</a></li>
+              <li><a href="/evidencias/CUADRO_MACHU_PICCHU_Guoliang.pdf">Cuadro resumen (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 7 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 7 — 03 julio · <span class="badge">Presencial · Festival Lúdico</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Desarrollar conciencia histórica mediante cortometrajes del Festival Lúdico y preparar Foro II.
+          </div>
+          <div><b>Evidencias:</b><ul class="ev-list"><li>Afiche/Fotos del festival</li></ul></div>
+        </div>
+      </details>
+
+      <!-- Clase 8 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 8 — 17 julio · <span class="badge">En línea (Asincrónica) · Foro II</span>
+        </summary>
+        <div class="content grid-2">
+          <div><b>Objetivo:</b> Analizar problemáticas de CR y LATAM a partir de 1–2 cortos del festival.</div>
+          <div><b>Evidencias:</b><ul class="ev-list"><li>Respuesta Foro II (captura/PDF)</li></ul></div>
+        </div>
+      </details>
+
+      <!-- Clase 9 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 9 — 24 julio · <span class="badge">Presencial</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Presentar proyectos #2 y #3; ver “Tecnología Romana”.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li><a href="/evidencias/TRABAJO_ESCRITO_GRUPO_1.docx">Trabajo escrito G#1</a></li>
+              <li><a href="/evidencias/PRESENTACION_GRUPO_1.docx">Presentación G#1</a></li>
+              <li><a href="/evidencias/TRABAJO_ESCRITO_3.docx">Trabajo escrito G#3</a></li>
+              <li><a href="/evidencias/PRESENTACION_GRUPO_3.docx">Presentación G#3</a></li>
+              <li><a href="/evidencias/GUIA_DOC_TECNOLOGIA_ROMANA.docx">Guía documental</a></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 10 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 10 — 31 julio · <span class="badge">Presencial</span>
+        </summary>
+        <div class="content grid-2">
+          <div><b>Objetivo:</b> Presentar proyectos #4 y #5; analizar documental de ciencia y tecnología.</div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li><a href="/evidencias/TRABAJO_ESCRITO_GRUPO_4.pdf">Trabajo escrito G#4</a></li>
+              <li><a href="https://www.canva.com/design/DAGusxMRXuE/pL6Je8NWVHwMWuSahSPt_w/edit" target="_blank" rel="noreferrer">Presentación G#4 (Canva)</a></li>
+              <li><a href="/evidencias/TRABAJO_ESCRITO_GRUPO_5.pdf">Trabajo escrito G#5</a></li>
+              <li><a href="/evidencias/PRESENTACION_GRUPO_5.pdf">Presentación G#5</a></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 11 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 11 — 07 agosto · <span class="badge">Presencial</span>
+        </summary>
+        <div class="content grid-2">
+          <div><b>Objetivo:</b> Presentar proyectos #6 y #7; analizar documental.</div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li><a href="/evidencias/TRABAJO_ESCRITO_6.pdf">Trabajo escrito #6</a></li>
+              <li><a href="/evidencias/PRESENTACION_GRUPO_6.pdf">Presentación G#6</a></li>
+              <li><a href="/evidencias/TRABAJO_ESCRITO_7.pdf">Trabajo escrito #7</a></li>
+              <li><a href="/evidencias/PRESENTACION_GRUPO_7.pptx">Presentación G#7 (PPTX)</a></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 12 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 12 — 14 agosto · <span class="badge">En línea (Asincrónica) · Foro III</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Analizar “Hidrógeno, combustible del futuro” (artículo + video) y participar en Foro III.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li><a href="/evidencias/HIDROGENO_COMBUSTIBLE_DEL_FUTURO.pdf">Artículo (PDF)</a></li>
+              <li><a href="https://www.youtube.com/watch?v=H4zWSz8C2AM" target="_blank" rel="noreferrer">Video TEDx · Hidrógeno</a></li>
+              <li>Respuesta Foro III (captura/PDF)</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 13 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 13 — 21 agosto · <span class="badge">Presencial</span>
+        </summary>
+        <div class="content grid-2">
+          <div>
+            <b>Objetivo:</b> Presentación Proyecto #8; actividad sobre inventos s. XX–XXI.
+          </div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li><a href="/evidencias/PROYECTO_8_PARTE_ESCRITA.pdf">Proyecto #8 (PDF)</a></li>
+              <li><a href="https://www.canva.com/design/DAGwk2Px3Qc/2YG_gXtlzkLmwqBlwXIkmA/edit" target="_blank" rel="noreferrer">Presentación Grupo #8 (Canva)</a></li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Clase 14 -->
+      <details class="acd">
+        <summary>
+          📅 Clase 14 — 28 agosto · <span class="badge">En línea (Asincrónica)</span>
+        </summary>
+        <div class="content grid-2">
+          <div><b>Objetivo:</b> Entrega final del Portafolio de Evidencias.</div>
+          <div>
+            <b>Evidencias:</b>
+            <ul class="ev-list">
+              <li>Portafolio consolidado (PDF/Word)</li>
+              <li>Comprobante de entrega</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- FOROS -->
+    <section class="block" id="foros">
+      <h2 class="section-title">Foros (resumen)</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Foro I · Importancia de la Historia</h3>
+          <p class="hint">Análisis del rol de la Historia como ciencia social para comprender el presente y proyectar el futuro.</p>
+        </div>
+        <div>
+          <h3>Foro II · Problemáticas en CR y LATAM</h3>
+          <p class="hint">Reflexión crítica basada en 1–2 cortometrajes del Festival Lúdico.</p>
+        </div>
+        <div>
+          <h3>Foro III · Hidrógeno, combustible del futuro</h3>
+          <p class="hint">Argumentación a partir de artículo y video; aplicaciones y retos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="block" id="proyectos">
+      <h2 class="section-title">Proyectos y Presentaciones</h2>
+      <ul class="ev-list">
+        <li>Grupos #1–#7: trabajos y presentaciones (ver sesiones 9–11).</li>
+        <li>Grupo #8: <a href="/evidencias/PROYECTO_8_PARTE_ESCRITA.pdf">“Los Avances Científicos de los Últimos Años”</a> y <a href="https://www.canva.com/design/DAGwk2Px3Qc/2YG_gXtlzkLmwqBlwXIkmA/edit" target="_blank" rel="noreferrer">presentación</a>.</li>
+      </ul>
+    </section>
+
+    <!-- DOCUMENTALES -->
+    <section class="block" id="documentales">
+      <h2 class="section-title">Documentales Analizados</h2>
+      <ul class="ev-list">
+        <li>Machu Picchu · Ingeniería Inca — Cuadro resumen individual.</li>
+        <li>Tecnología Romana — Guía de preguntas y discusión.</li>
+        <li>Hidrógeno: el combustible del futuro — Artículo + video TEDx.</li>
+      </ul>
+    </section>
+
+    <!-- DESCARGAS -->
+    <section class="block" id="descargas">
+      <h2 class="section-title">Descargas</h2>
+      <p class="lead">Coloca tus archivos en <code>/evidencias/</code> y actualiza los enlaces si fuese necesario.</p>
+      <ul class="ev-list">
+        <li><a href="/docs/Portafolio_Historia_Ciencia_Tecnologia.docx">Portafolio (DOCX)</a> · plantilla de índice</li>
+      </ul>
+      <p class="hint">Sugerido: sube también un PDF final del portafolio consolidado.</p>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div>© 2025 · Portafolio de Evidencias — Historia de la Ciencia, la Técnica y la Tecnología (II‑25, SC‑01)</div>
+    <div class="hint">Diseño responsive listo para GitHub Pages. Imprime desde el navegador para PDF.</div>
+  </footer>
+
+</body>
+</html>
